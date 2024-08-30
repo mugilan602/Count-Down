@@ -94,13 +94,14 @@ function Home() {
                 </div>
 
                 {/* Logos Container */}
-                <div className="absolute left-0 right-0 top-0 flex justify-between items-center px-4 lg:bottom-4 lg:top-auto">
+                <div className="absolute left-0 right-0 top-0 flex justify-between items-center px-4 md:bottom-4 md:top-auto lg:top-0 lg:bottom-auto">
                     {/* Logo on the left end */}
                     <img src={collegelogo} alt="Logo 1" className="w-32 h-32 mt-2 lg:mx-0 lg:mt-0" />
 
                     {/* Logo on the right end */}
                     <img src={nsslogo} alt="Logo 2" className="w-16 h-16 mr-9 mt-2 lg:mx-7 lg:mt-0" />
                 </div>
+
 
             </div>
         </>
