@@ -4,9 +4,6 @@ import videoplayback from "./assets/Backvideo.mp4";
 import collegelogo from "./assets/clglogo.png";
 import nsslogo from "./assets/nsslogo.png";
 function Home() {
-    const audioRef = useRef(null);
-
-    // State to hold the time remaining
     const [timeRemaining, setTimeRemaining] = useState({
         days: 0,
         hours: 0,
@@ -15,7 +12,6 @@ function Home() {
     });
 
     useEffect(() => {
-        // Set the target date and time (August 30, 2024, 8 PM)
         const targetDate = new Date('August 30, 2024 20:00:00').getTime();
 
         const updateCountdown = () => {
@@ -34,14 +30,11 @@ function Home() {
             }
         };
 
-        // Update the countdown every second
         const intervalId = setInterval(updateCountdown, 1000);
 
-        // Clean up the interval on component unmount
         return () => clearInterval(intervalId);
     }, []);
 
-    // Helper function to format time with leading zero
     const formatTime = (time) => (time < 10 ? `0${time}` : time);
 
     return (
